@@ -1,0 +1,2 @@
+%{"apex": {:hex, :apex, "0.4.0"},
+  "gen_coap": {:git, "https://github.com/gotthardp/gen_coap.git", "fcd54846c86b8b8d4d2c2e81f19afd8bafa89686", []}}
