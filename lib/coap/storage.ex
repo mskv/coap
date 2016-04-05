@@ -17,6 +17,10 @@ defmodule Coap.Storage do
     GenServer.call(@server_name, {:set, key, change, overwrite})
   end
 
+  def all do
+    GenServer.call(@server_name, :all)
+  end
+
   # GenServer handlers
 
   def init(_args) do
@@ -30,6 +34,10 @@ defmodule Coap.Storage do
 
   def handle_call({:set, key, change, overwrite}, _from, ets) do
     {:reply, do_set(ets, key, change, overwrite), ets}
+  end
+
+  def handle_call(:all, _from, ets) do
+    {:reply, :ets.tab2list(ets), ets}
   end
 
   def handle_call(request, from, ets) do
