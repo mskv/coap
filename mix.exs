@@ -17,7 +17,7 @@ defmodule Coap.Mixfile do
   defp deps do
     [
       {:gen_coap, git: "https://github.com/gotthardp/gen_coap.git"},
-      {:apex, "~>0.4.0"}
+      {:apex, "~> 1.0.0"}
     ]
   end
 end
